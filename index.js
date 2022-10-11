@@ -26,7 +26,7 @@ searchBox.addEventListener("keypress",setQuery)
                            let weatherEL = document.querySelector(".hi-low");
                                weatherEL.innerHTML =weather.weather[0].main; 
                                let hiLow =document.querySelector(".grad");
-                                   hiLow.innerHTML=`${weather.main.temp_min} °C / ${weather.main.temp_max} `}
+                                   hiLow.innerHTML=`${Math.round(weather.main.temp_min)} °C / ${Math.round(weather.main.temp_max)} `}
 
 function dateBuilded(a){
     let months = [
