@@ -2,24 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
-body{
+.weather-app{
     width: 100%;
     height: 100%;
-    background: url('./pexels-simon-berger-1183099.jpg') center/cover no-repeat;
-    font-family:Arial, Helvetica, sans-serif;    
+    background: url('img/pexels-josh-hild-2448749.jpg') center/cover no-repeat;
 }
-main{
-    display: grid;
-    grid-template-columns: 50% 50%;
+.black{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     height: 100vh;
     color: #FFF;
     background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.4));
     text-shadow: 2px 7px rgba(0,0,0,.6);
 }
 .date-wrapp{
-    display: flex;
+    display: flex; 
     flex-direction:column;
+    overflow: hidden;
     align-items: center;
     margin-top: 20vh;
 }
@@ -55,14 +57,14 @@ main{
     padding: 25px 25px 5px;
 }
 
-header{
+.search{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header input{
+.search input{
     width: 400px;
-    padding: 10px 25px;
+    padding: 16px 25px;
     font-size: 17px;
     border: none;
     outline: none;
@@ -71,93 +73,38 @@ header input{
     background-color: rgba(255,255,255,.3);
     transition: .5s ease;
 }
-header input:focus{
+.search input:focus{
     border: none;
     border-radius:0 16px 0 16px;
     background-color: rgba(255,245,255,.8);
 }
-
-/*
-// Small devices (landscape phones, less than 768px)
-*/
-
-/*
-// Medium devices (tablets, less than 992px)
-*/
-@media (max-width: 992px) {
-
-    body{
-        background: url('./pexels-simon-berger-1183099.jpg')center no-repeat;
-        background-size: cover;
-        font-family:Arial, Helvetica, sans-serif;
-    }
-    main{
-        grid-template-columns: 100%;
-        height: 100vh;
-        color: #FFF;
-        text-shadow: 2px 7px rgba(0,0,0,.6);
-    }
-    .date-wrapp{
-        margin: 0;
-    }
+@media (max-width: 1025px) {
+  .black{
+      grid-template-columns: 100%;
+  }
 
 }
-@media (max-width: 768px) {
-    body{
-        background: url('./pexels-simon-berger-1183099.jpg')center no-repeat;
-        background-size: cover;
-        font-family:Arial, Helvetica, sans-serif;
+@media (max-width: 705px) {
+    .temps{
+        font-size: 70px;
     }
-    main{
-
-        grid-template-columns: 100%;
-     }
-    header{
-        padding-bottom: 100px;
+    .temps span{
+        font-size: 70px;
     }
-
-    .date-wrapp{
-        margin: 0;
+    .search input{
+        width: 350px;
+    }
+    .black{
     }
 }
-
-
-@media (min-width: 250px) and ( max-width: 576px) {
-
-    body{
-        background: url('./pexels-josh-hild-2448749.jpg')center no-repeat;
-        background-size: cover;
-        font-family:Arial, Helvetica, sans-serif;
+@media  (max-width: 480px) {
+    .date{
+        font-size: 26px;
     }
-    main{
-        grid-template-columns: 100%;
+    .grad{
+        font-size: 30px;
     }
-
-    .date-wrapp{
-        margin: 0;
+    .search input{
+        width: 280px;
     }
 }
-
-
-/*
-
-@media (max-width: 1009px) {
-    body{
-        background: url('./pexels-simon-berger-1183099.jpg') no-repeat center;
-        background-size: cover;
-        font-family:Arial, Helvetica, sans-serif;
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: 100%;
-        height: 100%;
-        width: 100%;
-    }
-    header{
-        padding-top: 60px;
-        padding-bottom: 150px;
-    }
-
-    }
-*/

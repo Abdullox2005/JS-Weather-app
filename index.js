@@ -6,7 +6,7 @@ const api = {
 const searchBox = document.querySelector('.search-box');
 searchBox.addEventListener("keypress",setQuery)
   function setQuery (e){
-      if(e.keyCode == 13){
+      if(e.keyCode === 13){
         getResults(searchBox.value);
         console.log(searchBox.value);}}
     function getResults(query){
@@ -17,18 +17,18 @@ searchBox.addEventListener("keypress",setQuery)
          function displayResults(weather){
             console.log(weather);
             let city = document.querySelector(".location,.count");
-            city.innerHTML = `${weather.name},${weather.sys.country}`; 
+            city.innerHTML = `${weather.name},${weather.sys.country}`;
                 let now = new Date();
                 let date = document.querySelector(".date");
-                date.innerHTML = dateBuilded(now);     
+                date.innerHTML = dateBuilder(now);
                    let temp = document.querySelector(".temps");
                        temp.innerHTML = `${Math.round( weather.main.temp)}<span>°C</span>`; 
                            let weatherEL = document.querySelector(".hi-low");
-                               weatherEL.innerHTML =weather.weather[0].main; 
+                               weatherEL.innerHTML =weather.weather[0].main;
                                let hiLow =document.querySelector(".grad");
                                    hiLow.innerHTML=`${Math.round(weather.main.temp_min)} °C / ${Math.round(weather.main.temp_max)} `}
 
-function dateBuilded(a){
+function dateBuilder(a){
     let months = [
         "January",
         "February",
