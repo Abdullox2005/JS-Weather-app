@@ -98,6 +98,9 @@
     }
 }
 @media  (max-width: 480px) {
+    .date-wrapp{
+        margin-top: 10vh;
+    }
     .date{
         font-size: 26px;
     }
@@ -106,5 +109,9 @@
     }
     .search input{
         width: 280px;
+        margin-bottom: 200px;
     }
+
+
+
 }
